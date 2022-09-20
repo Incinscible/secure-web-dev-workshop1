@@ -208,12 +208,12 @@ function sortedCountFilmingTypes () {
 	}
 	var items = Object.keys(counter).map(function(key) {
 		return [key, counter[key]];
-	});
-
-	// Sort the array based on the second element
-	items.sort(function(first, second) {
+	  });
+	  
+	  // Sort the array based on the second element
+	  items.sort(function(first, second) {
 		return second[1] - first[1];
-	});
+	  });
 	return [items]
 }
 
@@ -250,15 +250,3 @@ filmingLocationLongestDuration();
 // 📝 TODO: Compute the average filming duration
 // 1. Implement the function
 // 2. Log the result
-function averageFilmingLocation() {
-	let total = 0;
-	for (let i of filmingLocations) {
-		let key = i.fields
-		let d1 = new Date(key.date_fin);
-		let d2 = new Date(key.date_debut);
-		let d3 = d1.getTime()-d2.getTime()
-		total+=d3;
-	}
-	return duration(total/filmingLocations.length);
-}
-console.log(averageFilmingLocation());
